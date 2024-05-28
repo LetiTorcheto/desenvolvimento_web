@@ -1,0 +1,697 @@
+.homewireframe {
+    position: relative;
+    width: 1440px;
+    height: 1763px;
+    background-color: #2b3d54;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .homewireframe .overlap {
+    position: absolute;
+    width: 1440px;
+    height: 84px;
+    top: 0;
+    left: 0;
+  }
+  
+  .homewireframe .navbar {
+    position: absolute;
+    width: 1440px;
+    height: 84px;
+    top: 0;
+    left: 0;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .homewireframe .logo {
+    position: absolute;
+    width: 223px;
+    height: 43px;
+    top: 18px;
+    left: 34px;
+  }
+  
+  .homewireframe .rectangle {
+    position: absolute;
+    width: 58px;
+    height: 43px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .homewireframe .text-wrapper {
+    position: absolute;
+    top: 14px;
+    left: 76px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffec97;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 14.5px;
+    white-space: nowrap;
+  }
+  
+  .homewireframe .items-navbar {
+    position: absolute;
+    width: 301px;
+    height: 16px;
+    top: 32px;
+    left: 1062px;
+    background-image: url(./img/union.svg);
+    background-size: 100% 100%;
+  }
+  
+  .homewireframe .search-bar {
+    position: absolute;
+    width: 415px;
+    height: 46px;
+    top: 18px;
+    left: 512px;
+  }
+  
+  .homewireframe .overlap-group {
+    position: relative;
+    width: 413px;
+    height: 46px;
+    background-color: #ffec97;
+    border-radius: 10px;
+  }
+  
+  .homewireframe .div {
+    position: absolute;
+    width: 346px;
+    height: 32px;
+    top: 7px;
+    left: 12px;
+    font-family: "Montserrat-Light", Helvetica;
+    font-weight: 300;
+    color: #2b3d54;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .union {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 9px;
+    left: 370px;
+  }
+  
+  .homewireframe .location {
+    position: absolute;
+    width: 187px;
+    height: 36px;
+    top: 17px;
+    left: 269px;
+  }
+  
+  .homewireframe .group {
+    position: absolute;
+    width: 24px;
+    height: 21px;
+    top: -3px;
+    left: -3px;
+  }
+  
+  .homewireframe .text-wrapper-2 {
+    position: absolute;
+    top: 13px;
+    left: 26px;
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffec97;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .homewireframe .line {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 1069px;
+    object-fit: cover;
+  }
+  
+  .homewireframe .cover-image {
+    position: absolute;
+    width: 1410px;
+    height: 453px;
+    top: 84px;
+    left: 35px;
+  }
+  
+  .homewireframe .img {
+    position: absolute;
+    width: 1405px;
+    height: 453px;
+    top: 0;
+    left: 0;
+  }
+  
+  .homewireframe .shop-by-category {
+    width: 1430px;
+    top: 577px;
+    left: 13px;
+    position: absolute;
+    height: 265px;
+  }
+  
+  .homewireframe .text-wrapper-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--h3-font-family);
+    font-weight: var(--h3-font-weight);
+    color: #60a65f;
+    font-size: var(--h3-font-size);
+    letter-spacing: var(--h3-letter-spacing);
+    line-height: var(--h3-line-height);
+    font-style: var(--h3-font-style);
+  }
+  
+  .homewireframe .group-2 {
+    position: absolute;
+    width: 1442px;
+    height: 199px;
+    top: 66px;
+    left: 0;
+  }
+  
+  .homewireframe .overlap-2 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: -10px;
+  }
+  
+  .homewireframe .rectangle-2 {
+    position: absolute;
+    width: 196px;
+    height: 164px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .homewireframe .rectangle-3 {
+    position: absolute;
+    width: 176px;
+    height: 55px;
+    top: 154px;
+    left: 10px;
+    background-color: #ffffff;
+    box-shadow: var(--ombra-card-9);
+  }
+  
+  .homewireframe .text-wrapper-4 {
+    position: absolute;
+    top: 169px;
+    left: 63px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .group-3 {
+    position: absolute;
+    width: 174px;
+    height: 140px;
+    top: 14px;
+    left: 10px;
+  }
+  
+  .homewireframe .overlap-3 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: 196px;
+  }
+  
+  .homewireframe .text-wrapper-5 {
+    position: absolute;
+    top: 169px;
+    left: 70px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .overlap-group-2 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: 402px;
+  }
+  
+  .homewireframe .frutas-e-verduras {
+    position: absolute;
+    top: 159px;
+    left: 63px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .overlap-group-3 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: 608px;
+  }
+  
+  .homewireframe .text-wrapper-6 {
+    position: absolute;
+    top: 169px;
+    left: 67px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .overlap-4 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: 814px;
+  }
+  
+  .homewireframe .group-4 {
+    position: absolute;
+    width: 171px;
+    height: 140px;
+    top: 14px;
+    left: 14px;
+  }
+  
+  .homewireframe .overlap-5 {
+    position: absolute;
+    width: 196px;
+    height: 209px;
+    top: -10px;
+    left: 1020px;
+  }
+  
+  .homewireframe .text-wrapper-7 {
+    position: absolute;
+    top: 169px;
+    left: 64px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .div-wrapper {
+    position: absolute;
+    width: 176px;
+    height: 55px;
+    top: 144px;
+    left: 1236px;
+    background-color: #ffffff;
+    box-shadow: var(--ombra-card-9);
+  }
+  
+  .homewireframe .text-wrapper-8 {
+    top: 11px;
+    left: 51px;
+    position: absolute;
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    color: #000000;
+    font-size: var(--h4-font-size);
+    letter-spacing: var(--h4-letter-spacing);
+    line-height: var(--h4-line-height);
+    font-style: var(--h4-font-style);
+  }
+  
+  .homewireframe .overlap-6 {
+    position: absolute;
+    width: 191px;
+    height: 144px;
+    top: 0;
+    left: 1236px;
+  }
+  
+  .homewireframe .rectangle-4 {
+    position: absolute;
+    width: 176px;
+    height: 144px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .homewireframe .group-5 {
+    position: absolute;
+    width: 174px;
+    height: 140px;
+    top: 0;
+    left: 18px;
+  }
+  
+  .homewireframe .overlap-7 {
+    position: absolute;
+    width: 1414px;
+    height: 265px;
+    top: 878px;
+    left: 13px;
+  }
+  
+  .homewireframe .shop-by-cousine {
+    width: 1414px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 265px;
+  }
+  
+  .homewireframe .group-6 {
+    position: absolute;
+    width: 1426px;
+    height: 199px;
+    top: 66px;
+    left: 0;
+  }
+  
+  .homewireframe .cal-as-bermudas {
+    position: absolute;
+    top: 159px;
+    left: 57px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .casacos-jaquetas {
+    position: absolute;
+    top: 159px;
+    left: 56px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .sapatos-tenis {
+    position: absolute;
+    top: 161px;
+    left: 71px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .text-wrapper-9 {
+    position: absolute;
+    top: 171px;
+    left: 53px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .cama-e-mesa {
+    position: absolute;
+    top: 157px;
+    left: 68px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .text-wrapper-10 {
+    top: 15px;
+    left: 57px;
+    position: absolute;
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    color: #000000;
+    font-size: var(--h4-font-size);
+    letter-spacing: var(--h4-letter-spacing);
+    line-height: var(--h4-line-height);
+    font-style: var(--h4-font-style);
+  }
+  
+  .homewireframe .rectangle-5 {
+    position: absolute;
+    width: 176px;
+    height: 144px;
+    top: 0;
+    left: 1236px;
+    object-fit: cover;
+  }
+  
+  .homewireframe .pair-trainers {
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    top: 159px;
+    left: 707px;
+    object-fit: cover;
+  }
+  
+  .homewireframe .restaurant {
+    position: absolute;
+    width: 1414px;
+    height: 503px;
+    top: 1198px;
+    left: 13px;
+  }
+  
+  .homewireframe .text-wrapper-11 {
+    position: absolute;
+    width: 332px;
+    top: 0;
+    left: 20px;
+    font-family: var(--h3-font-family);
+    font-weight: var(--h3-font-weight);
+    color: #18a450;
+    font-size: var(--h3-font-size);
+    letter-spacing: var(--h3-letter-spacing);
+    line-height: var(--h3-line-height);
+    font-style: var(--h3-font-style);
+  }
+  
+  .homewireframe .group-7 {
+    position: absolute;
+    width: 1412px;
+    height: 431px;
+    top: 72px;
+    left: 0;
+  }
+  
+  .homewireframe .group-8 {
+    position: absolute;
+    width: 274px;
+    height: 431px;
+    top: 0;
+    left: 0;
+  }
+  
+  .homewireframe .overlap-8 {
+    position: absolute;
+    width: 270px;
+    height: 431px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: var(--ombra-card-9);
+  }
+  
+  .homewireframe .rectangle-6 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 20px;
+    left: 35px;
+    object-fit: cover;
+  }
+  
+  .homewireframe .text-wrapper-12 {
+    position: absolute;
+    width: 153px;
+    top: 242px;
+    left: 20px;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .overlap-group-wrapper {
+    position: absolute;
+    width: 235px;
+    height: 43px;
+    top: 351px;
+    left: 20px;
+  }
+  
+  .homewireframe .overlap-group-4 {
+    position: relative;
+    width: 233px;
+    height: 43px;
+    background-color: #000000;
+    border-radius: 40px;
+  }
+  
+  .homewireframe .text-wrapper-13 {
+    left: 77px;
+    position: absolute;
+    top: 11px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .text-wrapper-14 {
+    position: absolute;
+    top: 274px;
+    left: 20px;
+    font-family: "Montserrat-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .vector {
+    position: absolute;
+    width: 198px;
+    height: 198px;
+    top: 5494px;
+    left: 19348px;
+  }
+  
+  .homewireframe .group-9 {
+    position: absolute;
+    width: 274px;
+    height: 431px;
+    top: 0;
+    left: 578px;
+  }
+  
+  .homewireframe .text-wrapper-15 {
+    left: 81px;
+    position: absolute;
+    top: 11px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .group-10 {
+    position: absolute;
+    width: 274px;
+    height: 431px;
+    top: 0;
+    left: 296px;
+  }
+  
+  .homewireframe .text-wrapper-16 {
+    left: 87px;
+    position: absolute;
+    top: 11px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .group-11 {
+    position: absolute;
+    width: 274px;
+    height: 431px;
+    top: 0;
+    left: 860px;
+  }
+  
+  .homewireframe .text-wrapper-17 {
+    left: 82px;
+    position: absolute;
+    top: 11px;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .homewireframe .group-12 {
+    position: absolute;
+    width: 274px;
+    height: 431px;
+    top: 0;
+    left: 1142px;
+  }
+  :root {
+    --h3-font-family: "Montserrat", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 30px;
+    --h3-letter-spacing: 0px;
+    --h3-line-height: normal;
+    --h3-font-style: normal;
+    --h4-font-family: "Montserrat", Helvetica;
+    --h4-font-weight: 700;
+    --h4-font-size: 16px;
+    --h4-letter-spacing: 0px;
+    --h4-line-height: normal;
+    --h4-font-style: normal;
+    --ombra-card-9: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+  }
+    
