@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def compra(request):
+    return HttpResponse('Compra')
+
+def carrinho(request):
+    return HttpResponse('carrinho')

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'doadores',
     'receptores',
     'inicio',
+    'compra',
 ]
 
 MIDDLEWARE = [
