@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def produtos(request):
-    return HttpResponse('Produtos')
+    return render(request, 'produtos.html')
 
 def alimentos(request):
     return HttpResponse('Alimentos')
