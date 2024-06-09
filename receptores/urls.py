@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.receptor),
+    path('login/', views.login),
 
 ]
