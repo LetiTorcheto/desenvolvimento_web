@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from doadores.models import doador
+from receptores.models import receptor
 
-class doadorForm(ModelForm):
+class receptorForm(ModelForm):
     class meta:
-        model = doador
+        model = receptor
         fields = ['cnpj', 'nome', 'senha', 'email']

@@ -10,7 +10,8 @@ def index(request):
 ]
     return HttpResponse('Pagina de cliente')
 
-def form(request):
-    data = {}
-    data['form'] = doadorForm()
-    return render (request, 'form.html', data)
+def login_view(request):
+    return render(request, 'login.html', {'loc': '/login/', 'error': '', 'errorclass': ''})
+
+def register_view(request):
+    return render(request, 'login.html', {'loc': '/register/', 'error': '', 'errorclass': ''})
