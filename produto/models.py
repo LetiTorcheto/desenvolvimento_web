@@ -17,10 +17,10 @@ class Produto(models.Model):
     
     def __str__(self):
         return self.nome +" | "+self.marca
-    
+
 class Review(models.Model):
-    produto = models.ForeignKey('produto',Produto,on_delete=models.SET_NULL,null=True)
-    user = models.ForeignKey('usuario',User,on_delete=models.SET_NULL,null=True)
+    produto = models.ForeignKey('produto',on_delete=models.SET_NULL,null=True)
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     nome = models.CharField('nome',max_length=200,null=True,blank=True)
     reviews =  models.IntegerField('avaliação do produto',null=True,blank=True,default=0)
     comentario = models.TextField('comentarios do produto',null=True,blank=True)
@@ -29,13 +29,3 @@ class Review(models.Model):
 
     def __str__(self):
         return str(self.reviews)
-    
-
-
-class alimentos(models.Model):
-    validade = models.DateTimeField('data de validade')
-
-
-class vestuario(models.Model):
-    cor = models.CharField('cor da roupa', max_length=20)
-    tamanho = models.CharField('tamanho da roupa', max_length=1)
