@@ -21,11 +21,11 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    ##path('produtos/', include('produto.urls')),
-    ###path('receptor/', include('receptor.urls')),
-    ###path('doador/', include('doador.urls')),
-    ##path('pedidos/', include('pedidos.urls')),
-    #path('', include('core.urls')),
+    path('produtos/', include('produto.urls')),
+    path('receptor/', include('receptor.urls')),
+    #path('doador/', include('doador.urls')),
+    path('pedidos/', include('pedidos.urls')),
+    path('', include('core.urls')),
     
     
 ] 
