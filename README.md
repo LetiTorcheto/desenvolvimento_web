@@ -38,7 +38,7 @@ e coerente de acordo com suas determinadas localidades e objetivos
 
 
 
-## **Tecnologias utlizadas**
+## **Tecnologias Utilizadas**
 
 - **Framework:** Django 
 - **Banco de dados:** sqliite
