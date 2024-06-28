@@ -4,12 +4,12 @@ Conectando Doadores e Necessitados para um Mundo Mais Solidário
 
 ## Índice
 
-- [Instalação](#instalação)
-- [Projeto e sua aplicação](#projeto).
-- [Tecnologias utlizadas](#Tec)
-- [Desenvolvimento](#dev)
-- [Licença](#licença)
-- [Contato](#contato)
+- Instalação
+- Projeto e sua aplicação
+- Tecnologias utlizadas
+- Desenvolvimento
+- Licença
+- Contato
 
 
 
