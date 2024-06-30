@@ -1,4 +1,4 @@
-**CONEXÇÂO DOADORA**
+# CONEXÇÂO DOADORA
 
 Conectando Doadores e Necessitados para um Mundo Mais Solidário
 
@@ -41,10 +41,10 @@ e coerente de acordo com suas determinadas localidades e objetivos
 ## **Tecnologias Utilizadas**
 
 - **Framework:** Django 
-- **Banco de dados:** sqliite
+- **Banco de dados:** sqlite
 - **Protipagem:** Figma e BrModelo
-- **Front End:** Bootstrap Studio utlizando de HTML, CSS E Java Scrpit
-- **API:** -----
+- **Front End:** Bootstrap Studio utlizando de HTML, CSS E Java Scrpit nas paginas HTML.
+- **API:** Utlização do framework React para a manipulação das informações e criação de usuario
 - **Hospedagem:** ---
 
 ## Desenvolvimento
