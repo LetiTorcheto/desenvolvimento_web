@@ -1,10 +1,15 @@
 import './App.css';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import HomePage from './screens/HomePage';
 
 
 function App() {
   return (
     <div className="App">
-      <h1> Teste telas </h1>
+      <Navbar/>
+      <HomePage/>
+      <Footer/>
     </div>
   );
 }
