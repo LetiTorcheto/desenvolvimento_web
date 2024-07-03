@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Form, Table } from "react-bootstrap";
-//import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {deleteUser , updateUser } from "../redux/slices/receptorSlice";
 import { listMyOrders , getOrderDetails} from "../redux/slices/pedidoSlice";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import CancelIcon from '@mui/icons-material/Cancel';
-
 function ProfileScreen({ history }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -156,7 +155,9 @@ function ProfileScreen({ history }) {
                     )}
                   </td>
                   <td>
+                    <LinkContainer to={`/orderDetail`}>
                       <Button className="btn-sm" onClick={() => dispatch(getOrderDetails(order._id))}>Detalhes</Button>
+                    </LinkContainer>
                   </td>
                 </tr>
               ))}

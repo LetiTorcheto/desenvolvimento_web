@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Grid, TextField, Button, Typography } from "@mui/material";
-import { styled } from "@mui/system"; 
+import { styled } from "@mui/system";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  login
- 
-} from "../redux/slices/receptorSlice";
+import { login } from "../redux/slices/receptorSlice";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/Form";
@@ -21,7 +18,7 @@ const useStyles = styled((theme) => ({
   },
 }));
 
-function LoginScreen({ location, history }) {
+function Login({ location, history }) {
   const classes = useStyles();
 
   const [email, setEmail] = useState("");
@@ -29,20 +26,23 @@ function LoginScreen({ location, history }) {
 
   const dispatch = useDispatch();
 
-  const redirect = location.search ? location.search.split("=")[1] : "/";
+  // Determine redirect path from query params; default to '/'
+  const redirect = location && location.search ? location.search.split("=")[1] : "/";
 
+  // Select user state from Redux store
   const userLogin = useSelector((state) => state.user);
   const { userDetails, loading, error } = userLogin;
 
+  // Redirect if user is logged in and userDetails exist
   useEffect(() => {
     if (userDetails) {
       history.replace(redirect);
     }
   }, [history, userDetails, redirect]);
 
+  // Handle form submission
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(email, password)
     dispatch(login(email, password));
   };
 
@@ -94,7 +94,7 @@ function LoginScreen({ location, history }) {
         </Button>
         <Grid container justify="flex-start">
           <Grid item>
-           Novo Usuario?{" "}
+            Novo Usuario?{" "}
             <Link
               to={redirect ? `/register?redirect=${redirect}` : "/register"}
               variant="body2"
@@ -108,4 +108,4 @@ function LoginScreen({ location, history }) {
   );
 }
 
-export default LoginScreen;
+export default Login;

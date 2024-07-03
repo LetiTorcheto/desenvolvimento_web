@@ -1,49 +1,26 @@
 import React from 'react';
+import { Navbar, Nav, Container } from "react-bootstrap";
+//import '../../assets/css/custom-navbar.css';
 
-function Navbar() {
+function CustomNavbar() {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg fixed-top bg-body clean-navbar" style={{ background: '#ffec97' }}>
-                <div className="container">
-                    <img 
-                        width="50" 
-                        height="50" 
-                        src="assets/img/_f1e05d43-10c5-4bd9-b41d-9d0cd90f39ca.jpeg" 
-                        alt="Logo"
-                    />
-                    <a className="navbar-brand logo" href="index.html">
-                        <span style={{ color: 'rgb(59, 120, 20)' }}>Conexão Doadora</span>
-                    </a>
-                    <button 
-                        data-bs-toggle="collapse" 
-                        className="navbar-toggler" 
-                        data-bs-target="#navcol-1"
-                    >
-                        <span className="visually-hidden">Toggle navigation</span>
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navcol-1">
-                        <div className="btn-toolbar"></div>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="Catalago.html">Produtos</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="Carrinho.html">Carrinho</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="profile.html">Perfil</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <button className="btn btn-primary" type="button">Sair</button>
-                </div>
-            </nav>
-        </div>
+        <>
+            <Navbar bg="dark" variant="dark" expand="lg">
+                <Container>
+                    <Navbar.Brand href="/" className="nav-link">Conexão Doadora</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto nav">
+                            <Nav.Link href="/" className="nav-link">Home</Nav.Link>
+                            <Nav.Link href="/catalogo" className="nav-link">Catálogo</Nav.Link>
+                            <Nav.Link href='/cart' className="nav-link">Carrinho</Nav.Link>
+                            <Nav.Link href='/profile' className="nav-link">Perfil</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
     );
 }
 
-export default Navbar;
+export default CustomNavbar;

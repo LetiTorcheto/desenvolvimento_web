@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, Box } from "@material-ui/core";
-import { Star, StarHalf, StarBorder } from "@material-ui/icons";
+import { Typography, Box } from "@mui/material";
+import { Star, StarHalf, StarBorder } from "@mui/icons-material";
+
 
 function Rating({ value, text, color }) {
   return (

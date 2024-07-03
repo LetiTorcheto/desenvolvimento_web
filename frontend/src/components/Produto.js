@@ -25,7 +25,7 @@ function Produto({ product: produto }) {
             />
           </Typography>
           <Typography variant="h6" component="div">
-            R${produto.price}
+            R${produto.estoque}
           </Typography>
         </CardContent>
       </CardActionArea>
