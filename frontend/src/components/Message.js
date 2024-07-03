@@ -1,7 +1,7 @@
-import MuiAlert from '@mui/material/Alert';
+import Alert from '@mui/material/Alert';
 import { styled } from '@mui/material/styles';
 
-const StyledAlert = styled(MuiAlert)(({ theme, variant }) => ({
+const StyledAlert = styled(Alert)(({ theme, variant }) => ({
   backgroundColor: "grey",
   color:"white"
 }));

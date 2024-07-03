@@ -4,23 +4,23 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomePage';
 import ProdutoScreen from './screens/ProdutoScreen';
 import CarrinhoScreen from './screens/CarrinnhoScreen';
-import PrerfilScreen from './screens/PerfilScreen';
+import PerfilScreen from './screens/PerfilScreen';
 import PedidoScreen from './screens/PedidoScreen';
 import NavbarBar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginScreen from './screens/Login';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <NavbarBar />
       <Container>
-        <Routes>
-          <Route path="/" Component={<HomeScreen />} />
-          <Route path="/profile" Component={<PrerfilScreen />} />
-          <Route path="/product/:id" Component={<ProdutoScreen />} />
-          <Route path="/cart" Component={<CarrinhoScreen />} />
-          <Route path="/order/:id" Component={<PedidoScreen />} />
-        </Routes>
+        <Route path="/" component={HomeScreen} />
+        <Route path="/profile" component={PerfilScreen} />
+        <Route path="/product/:id" component={ProdutoScreen} />
+        <Route path="/cart" component={CarrinhoScreen} />
+        <Route path="/order/:id" component={PedidoScreen} />
+        <Route path="/login" component={LoginScreen} />
       </Container>
       <Footer />
     </Router>
