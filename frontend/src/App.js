@@ -8,8 +8,12 @@ import CarrinhoScreen from './screens/CarrinnhoScreen';
 import PerfilScreen from './screens/PerfilScreen';
 import PedidoScreen from './screens/PedidoScreen';
 import NavbarBar from './components/Navbar';
-import Login from './screens/Login';
+import LoginScreen from './screens/Login';
 import RegisterScreen from './screens/Register';
+import Contato from './screens/Contato';
+import CriarProduto from "./screens/CriarProduto";
+import PlaceOrderScreen from './screens/PlaceOrder';
+import Catalogo from './screens/CatalogoScren';
 
 function App() {
   return (
@@ -22,8 +26,12 @@ function App() {
           <Route path="/product/:id" element={<ProdutoScreen />} />
           <Route path="/cart" element={<CarrinhoScreen />} />
           <Route path="/order/:id" element={<PedidoScreen />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginScreen />} />
           <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/contact" element={<Contato/>} />
+          <Route path="/criarproduto" element={<CriarProduto/>}/>
+          <Route path="/placeoreder" element={<PlaceOrderScreen/>}/>
+          <Route path="/catalogo" element={<Catalogo/>}/>
         </Routes>
       </Container>
       <Footer />

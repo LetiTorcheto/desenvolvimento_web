@@ -10,3 +10,4 @@ admin.site.register(Endereco)
 class PedidoAdmin(admin.ModelAdmin):
     list_display = [
         "user","created", "data_retirada"]
+    

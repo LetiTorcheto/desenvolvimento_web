@@ -1,10 +1,12 @@
-import React  from "react";
-
-function Footer(){
-        <footer class="page-footer dark">
-        <div class="footer-copyright">
-            <p>©Leandro e Leticia</p>
-        </div>
+import React from "react";
+import styles from "./css/Footer.css";
+function Footer() {
+  return (
+    <footer className={styles.copy_right}>
+    
+              Todos os direitos reservados &copy;Leticia e Leandro
     </footer>
+  );
 }
-export default Footer
+
+export default Footer;

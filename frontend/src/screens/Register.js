@@ -1,29 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { styled } from "@mui/system";
-import { Button, TextField, Grid, Typography, Container } from "@mui/material";
+import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import {Button,TextField,Grid,Typography,Container} from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "../redux/slices/receptorSlice";
+
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 
-const Form = styled('form')(({ theme }) => ({
-  width: "100%",
-  marginTop: theme.spacing(3),
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "left",
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: "100%",
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
 }));
 
-const Paper = styled('div')(({ theme }) => ({
-  marginTop: theme.spacing(8),
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "left",
-}));
+function RegisterScreen({ location, history }) {
+  const classes = useStyles();
 
-const SubmitButton = styled(Button)(({ theme }) => ({
-  margin: theme.spacing(3, 0, 2),
-}));
-
-function RegisterScreen() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,31 +38,29 @@ function RegisterScreen() {
   const [message, setMessage] = useState("");
 
   const dispatch = useDispatch();
-  const location = useLocation();
-  const navigate = useNavigate();
 
-  const redirect = new URLSearchParams(location.search).get('redirect') || "/";
+  const redirect = location.search ? location.search.split("=")[1] : "/";
   const { userDetails, loading, error } = useSelector((state) => state.user);
 
   useEffect(() => {
     if (userDetails) {
-      navigate(redirect);
+      history.push(redirect);
     }
-  }, [navigate, userDetails, redirect]);
+  }, [history, userDetails, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setMessage("As senhas não correspondem");
+      setMessage("Senha e corresponde");
     } else {
-      dispatch(createUser({ name, email, password }));
+      dispatch(createUser( name, email, password ));
     }
   };
 
   return (
     <Container component="main" maxWidth="xs">
-      <Paper>
+      <div className={classes.paper}>
         <Typography component="h1" style={{ fontWeight: "bold" }} variant="h5">
           Cadastrar
         </Typography>
@@ -63,7 +68,7 @@ function RegisterScreen() {
         {message && <Message variant="danger">{message}</Message>}
         {error && <Message variant="danger">{error}</Message>}
         {loading && <Loader />}
-        <Form onSubmit={submitHandler}>
+        <form className={classes.form} onSubmit={submitHandler}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -116,27 +121,28 @@ function RegisterScreen() {
               />
             </Grid>
           </Grid>
-          <SubmitButton
+          <Button
             type="submit"
             fullWidth
             variant="outlined"
             color="primary"
+            className={classes.submit}
           >
             Cadastrar
-          </SubmitButton>
+          </Button>
           <Grid container justifyContent="flex-start">
             <Grid item>
-              Já tem uma conta?
+            Já tem uma conta? 
               <Link
                 to={redirect ? `/login?redirect=${redirect}` : "/login"}
                 variant="body2"
               >
-                {" "}Login
+                 Login
               </Link>
             </Grid>
           </Grid>
-        </Form>
-      </Paper>
+        </form>
+      </div>
     </Container>
   );
 }

@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import { removeFromCart } from "../redux/slices/carrinhoSlice";
+import "../assets/css/style.css";
 
 function CartScreen({ history }) {
   const dispatch = useDispatch();
@@ -46,7 +47,6 @@ function CartScreen({ history }) {
                     <Link to={`/product/${item._id}`}>{item.name}</Link>
                   </Col>
                   <Col>{item.qty}</Col>
-                  <Col>R${item.price}</Col>
                   <Col md={1}>
                     <Button
                       type="button"
@@ -76,11 +76,11 @@ function CartScreen({ history }) {
           <ListGroup.Item>
             <Button
               type="button"
-              className="w-100"
+              className="btn btn-primary btn-lg d-block w-100"
               disabled={cartItems.length === 0}
               onClick={checkoutHandler}
             >
-              Fazer o check-out
+              Finalizar!
             </Button>
           </ListGroup.Item>
         </Card>

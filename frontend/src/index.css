@@ -204,3 +204,18 @@ code {
     --bs-btn-disabled-border-color: #212529;
   }
   
+/* Navbar.css */
+.navbar {
+    background-color: #212121;
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .activeNavLink {
+    border-bottom: 2px solid white;
+  }
+  
