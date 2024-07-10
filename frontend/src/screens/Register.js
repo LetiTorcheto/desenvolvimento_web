@@ -1,36 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
-import {Button,TextField,Grid,Typography,Container} from "@material-ui/core";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Button, TextField, Grid, Typography, Container } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "../redux/slices/receptorSlice";
-
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "left",
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: "100%",
-    marginTop: theme.spacing(3),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
-
-function RegisterScreen({ location, history }) {
-  const classes = useStyles();
-
+function RegisterScreen() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,29 +14,32 @@ function RegisterScreen({ location, history }) {
   const [message, setMessage] = useState("");
 
   const dispatch = useDispatch();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const redirect = location.search ? location.search.split("=")[1] : "/";
+  const redirect = new URLSearchParams(location.search).get('redirect') || "/";
+
   const { userDetails, loading, error } = useSelector((state) => state.user);
 
   useEffect(() => {
     if (userDetails) {
-      history.push(redirect);
+      navigate(redirect, { replace: true });
     }
-  }, [history, userDetails, redirect]);
+  }, [navigate, userDetails, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setMessage("Senha e corresponde");
+      setMessage("As senhas não correspondem");
     } else {
-      dispatch(createUser( name, email, password ));
+      dispatch(createUser(name, email, password));
     }
   };
 
   return (
     <Container component="main" maxWidth="xs">
-      <div className={classes.paper}>
+      <div style={{ marginTop: "8vh", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Typography component="h1" style={{ fontWeight: "bold" }} variant="h5">
           Cadastrar
         </Typography>
@@ -68,7 +47,7 @@ function RegisterScreen({ location, history }) {
         {message && <Message variant="danger">{message}</Message>}
         {error && <Message variant="danger">{error}</Message>}
         {loading && <Loader />}
-        <form className={classes.form} onSubmit={submitHandler}>
+        <form style={{ width: "100%", marginTop: "1vh" }} onSubmit={submitHandler}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
@@ -126,18 +105,18 @@ function RegisterScreen({ location, history }) {
             fullWidth
             variant="outlined"
             color="primary"
-            className={classes.submit}
+            style={{ margin: "3vh 0 2vh" }}
           >
             Cadastrar
           </Button>
           <Grid container justifyContent="flex-start">
             <Grid item>
-            Já tem uma conta? 
+              Já tem uma conta?{" "}
               <Link
                 to={redirect ? `/login?redirect=${redirect}` : "/login"}
                 variant="body2"
               >
-                 Login
+                Login
               </Link>
             </Grid>
           </Grid>

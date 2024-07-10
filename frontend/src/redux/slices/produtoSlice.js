@@ -8,7 +8,7 @@ const initialState = {
   topRatedProducts: { products: [], loading: false, error: null },
 };
 
-const productSlice = createSlice({
+const produtoSlice = createSlice({
   name: "product",
   initialState,
   reducers: {
@@ -79,7 +79,7 @@ export const {
   productTopRequest,
   productTopSuccess,
   productTopFailure,
-} = productSlice.actions;
+} = produtoSlice.actions;
 
 export const fetchProductList = (keyword ,pageNumber='') => async (dispatch) => {
   try {
@@ -122,5 +122,5 @@ export const fetchTopRatedProducts = () => async (dispatch) => {
   }
 };
 
-export const { reducer } = productSlice;
-export default productSlice;
+export const { reducer } = produtoSlice;
+export default produtoSlice;

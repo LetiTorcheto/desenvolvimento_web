@@ -11,7 +11,7 @@ class UserAPI {
         },
       };
 
-      const { data } = await axios.get(`/api/users/`, config);
+      const { data } = await axios.get(`/api/receptor/`, config);
       return data;
     } catch (error) {
       throw error.response && error.response.data.detail
@@ -30,7 +30,7 @@ class UserAPI {
         }
       };
   
-      const { data } = await axios.post('/api/users/register/', { name, email, password }, config);
+      const { data } = await axios.post('/api/receptor/registro/', { name, email, password }, config);
       return data;
     } catch (error) {
       throw error.response && error.response.data.detail
@@ -50,7 +50,7 @@ class UserAPI {
         },
       };
 
-      const { data } = await axios.put(`/api/users/profile/update/`, updateData, config);
+      const { data } = await axios.put(`api/receptor/perfil/atualizacao/`, updateData, config);
       return data;
     } catch (error) {
       throw error.response && error.response.data.detail
@@ -69,7 +69,7 @@ class UserAPI {
         },
       };
 
-      await axios.delete(`/api/users/delete/${userId}/`, config);
+      await axios.delete(`api/receptor/delete/${userId}/`, config);
     } catch (error) {
       throw error.response && error.response.data.detail
         ? error.response.data.detail
@@ -79,7 +79,7 @@ class UserAPI {
 
   async login(email, password) {
     try {
-      const { data } = await axios.post('/api/users/login/',{ username: email, password: password });
+      const { data } = await axios.post('api/receptor/login/',{ username: email, password: password });
       return data;
     } catch (error) {
       throw error.response && error.response.data.detail

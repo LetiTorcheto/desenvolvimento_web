@@ -6,7 +6,7 @@ import Loader from "./Loader";
 import Message from "./Message";
 import { fetchTopRatedProducts } from "../redux/slices/produtoSlice";
 
-function ProductCarrosel() {
+function ProdutoCarousel() {
   const dispatch = useDispatch();
   const topRatedProducts = useSelector((state) => state.product.topRatedProducts)
   const { error, loading, products } = topRatedProducts ;
@@ -36,4 +36,4 @@ function ProductCarrosel() {
   );
 }
 
-export default ProductCarrosel;
+export default ProdutoCarousel;
